@@ -1,4 +1,6 @@
-import { useRef, FC, useEffect, useState } from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import { useRef, useEffect, useState } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
 import SpeedControl from "./SpeedControl";
@@ -84,7 +86,7 @@ const VideoPlayer = (props) => {
                     onKeyDown={(e: any) => {
                         if (e.key === "Enter" && e.target.value) {
                             addNote(e.target.value);
-                            e.target.value = ""; 
+                            e.target.value = "";
                         }
                     }}
                 />
