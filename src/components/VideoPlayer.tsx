@@ -3,7 +3,6 @@
 import { useRef, useEffect, useState } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
-import SpeedControl from "./SpeedControl";
 
 const VideoPlayer = (props) => {
     const videoRef = useRef<HTMLDivElement>(null);
