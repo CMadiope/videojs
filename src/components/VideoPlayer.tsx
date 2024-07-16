@@ -6,8 +6,8 @@ import "video.js/dist/video-js.css";
 import SpeedControl from "./SpeedControl";
 
 const VideoPlayer = (props) => {
-    const videoRef = useRef(null);
-    const playerRef = useRef(null);
+    const videoRef = useRef<HTMLDivElement>(null);
+    const playerRef = useRef<any>(null);
     const [playbackRate, setPlaybackRate] = useState(1);
     const [notes, setNotes] = useState<{ time: number; text: string }[]>([]);
     const { options, onReady } = props;
@@ -17,7 +17,7 @@ const VideoPlayer = (props) => {
             const videoElement = document.createElement("video-js");
 
             videoElement.classList.add("vjs-big-play-centered");
-            videoRef.current.appendChild(videoElement);
+            videoRef.current?.appendChild(videoElement);
 
             const player = (playerRef.current = videojs(
                 videoElement,
