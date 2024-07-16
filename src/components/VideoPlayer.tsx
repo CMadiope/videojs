@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import videojs from "video.js";
 import "video.js/dist/video-js.css";
 
-const VideoPlayer = (props) => {
+const VideoPlayer = (props:any) => {
     const videoRef = useRef<HTMLDivElement>(null);
     const playerRef = useRef<any>(null);
     const [playbackRate, setPlaybackRate] = useState(1);
